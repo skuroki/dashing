@@ -174,5 +174,5 @@ require settings_file if File.exists?(settings_file)
 
 {}.to_json # Forces your json codec to initialize (in the event that it is lazily loaded). Does this before job threads start.
 job_path = ENV["JOB_PATH"] || 'jobs'
-require_glob(File.join('lib', '**', '*.rb'))
+# require_glob(File.join('lib', '**', '*.rb'))
 require_glob(File.join(job_path, '**', '*.rb'))
